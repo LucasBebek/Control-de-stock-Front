@@ -1,28 +1,22 @@
 <p>agregar-producto works!</p>
 <body>
      <h3>Agregar producto</h3>
-     <div>
-        <span>
+     <button class="volver" [routerLink]="['']">Volver</button>
+     <form>
+        
             <label for="nombre">Nombre</label>
-            <input [(ngModel)]="producto.nombre" type="text" name="nombre">
-        </span>
-        <span>
-            <label for="">Precio</label>
-            <input type="number">
-        </span>
-        <span>
-            <label for="">Precio Unitario</label>
-            <input type="number">
-        </span>
-        <span>
-            <label for="">Stock</label>
-            <input type="number">
-        </span>
-        <span>
+            <input [ngModel]="producto.nombre" type="text" name="nombre">
+        
+            <label for="precio">Precio</label>
+            <input [ngModel]="producto.precio" type="number" name="precio">
+     
+            <label for="stock">Stock</label>
+            <input [ngModel]="producto.stock" type="number" name="stock">
+      
             <label for="">Categoria</label>
-            <select *ngFor="let categoria of categorias" name="Categoria" id="">
-                 <option  value="{{categoria.nombre_categoria}}"></option>
+            <select  name="categoria" id="categoria" [ngModel]="producto.categoria_name" (ngModelChange)="producto.categoria_name = $event">
+                 <option *ngFor="let categoria of categorias" [value]="categoria.nombre_categoria">{{ categoria.nombre_categoria }}</option>
             </select>
-        </span>
-     </div>
+        
+     </form>
 </body>

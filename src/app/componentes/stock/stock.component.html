@@ -4,7 +4,7 @@
     
 
 <body>
-    <button class="agregar">agregar </button>
+    <button class="agregar" [routerLink]="['/add']">agregar </button>
     <div>
         <table  class="table table-striped">
             <thead>
@@ -21,7 +21,7 @@
                 <tr *ngFor="let producto of productos">
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
-                    <td>{{producto.precio_unitario}}</td>
+                   
                     <td>{{producto.stock}}</td>
                     <td>{{producto.categoria_name}}</td>
                     <button class="btn btn-warning">Editar</button>
