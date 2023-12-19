@@ -20,8 +20,8 @@
         </span>
         <span>
             <label for="">Categoria</label>
-            <select *ngFor="let Categoria of categorias" name="Categoria" id="">
-                 <option  value=""></option>
+            <select *ngFor="let categoria of categorias" name="Categoria" id="">
+                 <option  value="{{categoria.nombre_categoria}}"></option>
             </select>
         </span>
      </div>
