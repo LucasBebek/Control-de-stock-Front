@@ -3,24 +3,26 @@
      <h3>Agregar producto</h3>
      <div>
         <span>
-            <label for="nombre"></label>
+            <label for="nombre">Nombre</label>
             <input [(ngModel)]="producto.nombre" type="text" name="nombre">
         </span>
         <span>
-            <label for=""></label>
+            <label for="">Precio</label>
             <input type="number">
         </span>
         <span>
-            <label for=""></label>
+            <label for="">Precio Unitario</label>
             <input type="number">
         </span>
         <span>
-            <label for=""></label>
+            <label for="">Stock</label>
             <input type="number">
         </span>
         <span>
-            <label for=""></label>
-            <input type="select">
+            <label for="">Categoria</label>
+            <select *ngFor="let Categoria of categorias" name="Categoria" id="">
+                 <option  value=""></option>
+            </select>
         </span>
      </div>
 </body>

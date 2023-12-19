@@ -12,13 +12,13 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     StockComponent,
-    AgregarProductoComponent,
-    FormsModule
+    AgregarProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
