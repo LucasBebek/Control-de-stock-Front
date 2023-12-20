@@ -13,6 +13,7 @@ export class StockComponent implements OnInit{
     
     productos : Producto [] = [];
     categorias : Categoria[] = [];
+    datoBuscado=''
     
     constructor(private productoService: ProductoService,private categoriaService: CategoriaService){}
 

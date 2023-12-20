@@ -11,6 +11,13 @@
         
     </div>
 </header>
+<input
+          class="busq-input"
+          type="text"
+          name="datoBuscado"
+          placeholder="Buscar"
+          [(ngModel)]="datoBuscado"
+        />
     <div>
         <table class="table table-striped">
             <thead>
@@ -23,7 +30,7 @@
             </thead>
             <!-- se usan los campos del ProductoDto que seria como ProductoResponse -->
             <tbody >
-                <tr *ngFor="let producto of productos">
+                <tr *ngFor="let producto of productos | filtro:datoBuscado">
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}$</td>
                     <td>{{producto.stock}}</td>

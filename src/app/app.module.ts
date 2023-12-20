@@ -11,6 +11,8 @@ import { EditarProductoComponent } from './componentes/stock/editar-producto/edi
 import { AgregarCategoriaComponent } from './componentes/categorias/agregar-categoria/agregar-categoria.component';
 import { EditarCategoriaComponent } from './componentes/categorias/editar-categoria/editar-categoria.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { FiltroPipe } from './pipe/pipe';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { CategoriasComponent } from './componentes/categorias/categorias.compone
     EditarProductoComponent,
     AgregarCategoriaComponent,
     EditarCategoriaComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
