@@ -1,22 +1,31 @@
-<p>agregar-producto works!</p>
+
 <body>
-     <h3>Agregar producto</h3>
-     <button class="volver" [routerLink]="['']">Volver</button>
-     <form>
-        
-            <label for="nombre">Nombre</label>
-            <input [ngModel]="producto.nombre" type="text" name="nombre">
-        
-            <label for="precio">Precio</label>
-            <input [ngModel]="producto.precio" type="number" name="precio">
-     
-            <label for="stock">Stock</label>
-            <input [ngModel]="producto.stock" type="number" name="stock">
-      
-            <label for="">Categoria</label>
-            <select  name="categoria" id="categoria" [ngModel]="producto.categoria_name" (ngModelChange)="producto.categoria_name = $event">
-                 <option *ngFor="let categoria of categorias" [value]="categoria.nombre_categoria">{{ categoria.nombre_categoria }}</option>
-            </select>
-        
+    <form >
+          <button class="volver" [routerLink]="['']">Volver</button>
+          <h3>Agregar producto</h3>
+
+            <span>
+               <label for="nombre">Nombre</label>
+            <input class="input" id="nombre" [(ngModel)]="producto.nombre" type="text" name="nombre">
+            </span>
+            
+            <span>
+               <label for="precio">Precio</label>
+            <input class="input" id="precio" [(ngModel)]="producto.precio" type="number" name="precio">
+            </span>
+            
+            <span>
+               <label for="stock">Stock</label>
+            <input class="input" id="stock" [(ngModel)]="producto.stock" type="number" name="stock">
+            </span>
+            
+            <span>
+               <label for="categoria">Categoria</label>
+               <select  class="input" name="categoria" id="categoria" [(ngModel)]="selectedCategoryId">
+                 <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre_categoria }}</option>
+               </select>
+            </span>
+            <br>
+            <button class="Agregar" (click)="agregarUnProducto(producto)">Añadir</button>
      </form>
 </body>

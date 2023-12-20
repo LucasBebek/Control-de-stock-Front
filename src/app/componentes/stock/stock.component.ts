@@ -10,9 +10,10 @@ import { ProductoService } from 'src/app/services/producto.service';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit{
+    
     productos : Producto [] = [];
     categorias : Categoria[] = [];
-
+    
     constructor(private productoService: ProductoService,private categoriaService: CategoriaService){}
 
     ngOnInit(){
@@ -23,12 +24,18 @@ export class StockComponent implements OnInit{
     private obtenerLasCategorias(){
       this.categoriaService.obtenerCategorias().subscribe(res =>{
         this.categorias = res;
-        
+       
       })
     }
     
-
-    private obtenerLosProductos(){
+    eliminarProducto(id:number){
+      this.productoService.eliminarProducto(id).subscribe(res =>{
+           console.log("producto eliminado", res);
+           this.obtenerLosProductos();
+           
+      })
+    }
+    obtenerLosProductos(){
       this.productoService.obtenerProductos().subscribe(res =>{
         this.productos = res;
         

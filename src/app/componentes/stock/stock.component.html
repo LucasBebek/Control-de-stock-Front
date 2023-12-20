@@ -1,9 +1,5 @@
-<header>
-    <h1>Control de stock</h1>
-</header>
-    
-
 <body>
+    <h1>Control de stock</h1>
     <button class="agregar" [routerLink]="['/add']">agregar </button>
     <div>
         <table  class="table table-striped">
@@ -11,7 +7,6 @@
                 <tr>
                     <th>NOMBRE</th>
                     <th>PRECIO</th>
-                    <th>PRECIO UNITARIO</th>
                     <th>STOCK</th>
                     <th>CATEGORIA</th>
                 </tr>
@@ -21,11 +16,10 @@
                 <tr *ngFor="let producto of productos">
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
-                   
                     <td>{{producto.stock}}</td>
-                    <td>{{producto.categoria_name}}</td>
+                    <td>{{producto.categoria_id}}</td>
                     <button class="btn btn-warning">Editar</button>
-                    <button class="btn btn-danger">Borrar</button>
+                    <button class="btn btn-danger" (click)="eliminarProducto(producto.id)">Borrar</button>
                 </tr>
             </tbody>
         </table>

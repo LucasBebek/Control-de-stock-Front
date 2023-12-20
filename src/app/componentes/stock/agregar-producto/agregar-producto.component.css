@@ -1,4 +1,38 @@
+
 .volver{
     position: relative;
     left: 85%;
+}
+body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    padding:30px 0 0 30px;
+    background-color: rgb(58, 58, 58);
+}
+form{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 238, 0.7);
+    border: 2px solid;
+    max-width: 600px;
+    backdrop-filter: blur(5px);
+}
+span{
+   display: block;
+}
+span>label{
+  padding-right: 20px;
+}
+span{
+    width: 60%;
+}
+label{
+    
+    position: relative;
+    display: flex; 
+}
+input, select{
+    width: 60%;
+    
 }

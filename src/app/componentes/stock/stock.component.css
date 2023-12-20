@@ -1,4 +1,9 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
 .agregar{
     position: relative;
     left: 85%;
 }
+

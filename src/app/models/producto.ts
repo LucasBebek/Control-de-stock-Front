@@ -6,7 +6,7 @@ export class Producto{
          precio: number;
          
          stock: number;
-         categoria_name: String;
+         categoria_id: number;
     
     constructor(
          id: number,
@@ -14,13 +14,13 @@ export class Producto{
         precio: number,
         
         stock: number,
-        categoria_name: String
+        categoria_id: number
         ){
             this.id = id;
             this.nombre = nombre;
             this.precio = precio;
            
             this.stock = stock;
-            this.categoria_name = categoria_name;
+            this.categoria_id = categoria_id;
         }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, ObservedValueOf } from "rxjs";
 import { Producto } from '../models/producto';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Producto } from '../models/producto';
 })
 export class ProductoService {
   private baseURL = "http://localhost:8080/producto";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   obtenerProductos(): Observable<Producto[]>{
     return this.http.get<Producto[]>(`${this.baseURL}/all`)
@@ -16,5 +16,15 @@ export class ProductoService {
 
   agregarProducto(nuevoProducto : Producto): Observable<object>{
         return this.http.post(`${this.baseURL}/add`, nuevoProducto);
+  }
+
+  verificarNombreExistente(nombre: string): Observable<boolean> {
+    // Realizar una solicitud al servidor para verificar la existencia del nombre
+    return this.http.get<boolean>(`${this.baseURL}/verificarNombre/${nombre}`);
+}
+  eliminarProducto(id: number):Observable<Object>{
+    const url = `${this.baseURL}/delete/${id}`;
+     return this.http.delete(url, { responseType: 'text' });
+     
   }
 }
