@@ -7,12 +7,14 @@ import { StockComponent } from './componentes/stock/stock.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AgregarProductoComponent } from './componentes/stock/agregar-producto/agregar-producto.component';
 import { FormsModule } from '@angular/forms';
+import { EditarProductoComponent } from './componentes/stock/editar-producto/editar-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StockComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    EditarProductoComponent
   ],
   imports: [
     BrowserModule,

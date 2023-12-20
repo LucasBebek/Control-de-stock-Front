@@ -18,7 +18,7 @@
                     <td>{{producto.precio}}</td>
                     <td>{{producto.stock}}</td>
                     <td>{{producto.categoria_id}}</td>
-                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-warning" [routerLink]="['/edit',producto.id]">Editar</button>
                     <button class="btn btn-danger" (click)="eliminarProducto(producto.id)">Borrar</button>
                 </tr>
             </tbody>

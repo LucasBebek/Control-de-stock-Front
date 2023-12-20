@@ -1,0 +1,31 @@
+<p>editar-producto works!</p>
+<body>
+    <form >
+          <button class="volver" [routerLink]="['']">Volver</button>
+          <h3>Editar</h3>
+
+            <span>
+               <label for="nombre">Nombre</label>
+            <input class="input" id="nombre" [(ngModel)]="this.producto.nombre" type="text" name="nombre">
+            </span>
+            
+            <span>
+               <label for="precio">Precio</label>
+            <input class="input" id="precio" [(ngModel)]="this.producto.precio" type="number" name="precio">
+            </span>
+            
+            <span>
+               <label for="stock">Stock</label>
+            <input class="input" id="stock" [(ngModel)]="this.producto.stock" type="number" name="stock">
+            </span>
+            
+            <span>
+               <label for="categoria">Categoria</label>
+               <select  class="input" name="categoria" id="categoria" [(ngModel)]="selectedCategoryId">
+                 <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre_categoria }}</option>
+               </select>
+            </span>
+            <br>
+            <button class="Editar" (click)="editarProducto(idSeleccionado, producto)">Listo</button>
+     </form>
+</body>

@@ -15,16 +15,23 @@ export class ProductoService {
   }
 
   agregarProducto(nuevoProducto : Producto): Observable<object>{
-        return this.http.post(`${this.baseURL}/add`, nuevoProducto);
+      return this.http.post(`${this.baseURL}/add`, nuevoProducto);
   }
 
   verificarNombreExistente(nombre: string): Observable<boolean> {
     // Realizar una solicitud al servidor para verificar la existencia del nombre
     return this.http.get<boolean>(`${this.baseURL}/verificarNombre/${nombre}`);
-}
+  }
   eliminarProducto(id: number):Observable<Object>{
     const url = `${this.baseURL}/delete/${id}`;
      return this.http.delete(url, { responseType: 'text' });
      
+  }
+  encontrarProducto(id: number):Observable<any>{
+        return this.http.get(`${this.baseURL}/find/${id}`)
+  }
+
+  editarProducto(id: number, producto: Producto):Observable<any>{
+    return this.http.put(`${this.baseURL}/edit/${id}`,producto);
   }
 }
