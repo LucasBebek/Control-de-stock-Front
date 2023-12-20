@@ -1,0 +1,30 @@
+<body>
+    <header>
+        <h1>Lista de Categorias</h1>
+        <div class="agregar">
+            <button class="btn-agregar" [routerLink]="['/addCategoria']">Agregar Categoria</button>
+            <button class="btn-agregar" [routerLink]="['']">Lista de Productos</button>   
+        </div>
+    </header>
+        
+        
+        
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>CATEGORIAS</th>
+                    </tr>
+                </thead>
+                
+                <tbody >
+                   <tr *ngFor="let categoria of categorias">
+                    <td>{{categoria.nombre_categoria}}</td>
+                   
+                    <button class="btn btn-warning" style="margin: 0px 10px 0 10px;" [routerLink]="['/editCategoria', categoria.id]">Editar</button>
+                    <button class="btn btn-danger" >Borrar</button>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>

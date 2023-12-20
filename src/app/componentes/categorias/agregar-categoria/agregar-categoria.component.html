@@ -1,0 +1,15 @@
+
+<body>
+    <form action="">
+        <button class="volver" [routerLink]="['/categorias']" >Volver</button>
+    <h3>Agregar nueva Categoria</h3>
+
+    <span>
+        <label for="">Nombre de la categoria</label>
+        <input type="text" [(ngModel)]="categoria.nombre_categoria" name="nombre_categoria">
+    </span>
+    <br>
+    <button class="Agregar" (click)="agregarUnaCategoria(categoria)">Añadir</button>
+    </form>
+    
+</body>

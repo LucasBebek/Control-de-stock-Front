@@ -1,26 +1,26 @@
-<p>editar-producto works!</p>
+
 <body>
     <form >
           <button class="volver" [routerLink]="['']">Volver</button>
-          <h3>Editar</h3>
+          <h3>Editando {{producto.nombre}}</h3>
 
             <span>
-               <label for="nombre">Nombre</label>
+               <label for="nombre">Nombre: {{this.producto.nombre}}</label>
             <input class="input" id="nombre" [(ngModel)]="this.producto.nombre" type="text" name="nombre">
             </span>
             
             <span>
-               <label for="precio">Precio</label>
+               <label for="precio">Precio: {{this.producto.precio}}</label>
             <input class="input" id="precio" [(ngModel)]="this.producto.precio" type="number" name="precio">
             </span>
             
             <span>
-               <label for="stock">Stock</label>
+               <label for="stock">Stock: {{producto.stock}}</label>
             <input class="input" id="stock" [(ngModel)]="this.producto.stock" type="number" name="stock">
             </span>
             
             <span>
-               <label for="categoria">Categoria</label>
+               <label for="categoria">Categoria: {{ producto.categoria_id }}</label>
                <select  class="input" name="categoria" id="categoria" [(ngModel)]="selectedCategoryId">
                  <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre_categoria }}</option>
                </select>

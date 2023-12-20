@@ -1,0 +1,14 @@
+
+<body>
+    <form >
+          <button class="volver" [routerLink]="['/categorias']">Volver</button>
+          <h3>Editar</h3>
+
+            <span>
+               <label for="nombre">Editar {{categoria.nombre_categoria}}</label>
+            <input class="input" id="nombre" [(ngModel)]="this.categoria.nombre_categoria" type="text" name="nombre_categoria">
+            </span>
+            <br>
+            <button class="Editar" (click)="editarLaCategoria(idSeleccionado, categoria)">Listo</button>
+     </form>
+</body>

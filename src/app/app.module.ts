@@ -8,13 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgregarProductoComponent } from './componentes/stock/agregar-producto/agregar-producto.component';
 import { FormsModule } from '@angular/forms';
 import { EditarProductoComponent } from './componentes/stock/editar-producto/editar-producto.component';
+import { AgregarCategoriaComponent } from './componentes/categorias/agregar-categoria/agregar-categoria.component';
+import { EditarCategoriaComponent } from './componentes/categorias/editar-categoria/editar-categoria.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StockComponent,
     AgregarProductoComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    AgregarCategoriaComponent,
+    EditarCategoriaComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
