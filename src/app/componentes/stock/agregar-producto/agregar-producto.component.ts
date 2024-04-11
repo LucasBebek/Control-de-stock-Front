@@ -41,7 +41,8 @@ export class AgregarProductoComponent implements OnInit{
   
               if (this.producto.nombre && this.producto.precio && this.producto.categoria_id) {
                   this.productoService.agregarProducto(producto).subscribe((respuesta) => {
-                      console.log('Producto guardado exitosamente', respuesta);
+                      console.log(respuesta)
+                    alert('Producto guardado exitosamente: ' + producto.nombre);
                       this.router.navigate(['']);
                   });
               } else {

@@ -19,7 +19,8 @@ export class AgregarCategoriaComponent implements OnInit{
   agregarUnaCategoria(categoria:Categoria){
       if(this.categoria.nombre_categoria){
          this.categoriaService.agregarCategoria(categoria).subscribe((respuesta)=>{
-          console.log('Categoria agregada exitosamente', respuesta);
+          console.log( respuesta);
+          alert('Categoria agregada exitosamente: ' + categoria.nombre_categoria);
           this.router.navigate(['']);
          })
       }else{

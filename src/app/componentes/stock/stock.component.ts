@@ -31,7 +31,7 @@ export class StockComponent implements OnInit{
     
     eliminarProducto(id:number){
       this.productoService.eliminarProducto(id).subscribe(res =>{
-           console.log("producto eliminado", res);
+           console.log(res);
            this.obtenerLosProductos();
            
       })

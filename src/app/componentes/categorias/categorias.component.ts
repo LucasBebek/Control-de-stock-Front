@@ -14,6 +14,13 @@ import { CategoriaService } from "src/app/services/categoria.service";
   ngOnInit(){
     this.obtenerLasCategorias();
   }
+
+  eliminarCategoria(id:number){
+    this.categoriaService.eliminarCategoria(id).subscribe(res =>{
+      console.log(res);
+      this.obtenerLasCategorias();
+    })
+  }
   private obtenerLasCategorias(){
     this.categoriaService.obtenerCategorias().subscribe(res =>{
       this.categorias = res;

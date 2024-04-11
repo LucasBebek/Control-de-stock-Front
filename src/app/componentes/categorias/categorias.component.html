@@ -22,7 +22,7 @@
                     <td>{{categoria.nombre_categoria}}</td>
                    
                     <button class="btn btn-warning" style="margin: 0px 10px 0 10px;" [routerLink]="['/editCategoria', categoria.id]">Editar</button>
-                    <button class="btn btn-danger" >Borrar</button>
+                    <button class="btn btn-danger" (click)="eliminarCategoria(categoria.id)">Borrar</button>
                     </tr>
                 </tbody>
             </table>
